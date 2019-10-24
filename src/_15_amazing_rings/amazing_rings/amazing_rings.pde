@@ -1,77 +1,31 @@
 void setup() {
   size(1280,720);
-  background(#D8D8D8);
-  int size = 500;
+  
 }
 int x1 = 960;
 int x = 320;
 
 
 void draw() {
-  if(x == 640 && x1 == 640){
-    
-  }
   background(#D8D8D8);
-  int size = 500;
-  for(int i = 0; i < 50; i++) {
-  if(i % 2 == 0) {
-      fill(#000000);
-    }
-    else
-    {
-     fill(#D8D8D8); 
-    }
-    ellipse(x++, 360, size, size);
-    size-=10;
+  if(x == 1280 && x1 == 0)
+  {
+    x=0;
+    x1=1280;
   }
-  size = 500;
-  for(int i = 0; i < 50; i++) {
+  for(int i = 30; i >= 0 ; i--) {
   if(i % 2 == 0) {
-      fill(#000000);
+     noFill();
     }
-    else
-    {
-     fill(#D8D8D8); 
-    }
-    ellipse(x1--, 360, size, size);
-    size-=10;
+      ellipse(x, 360, i*12, i*12);
   }
-}void setup() {
-  size(1280,720);
-  background(#D8D8D8);
-  int size = 500;
-}
-int x1 = 960;
-int x = 320;
+  for(int i1 = 30; i1 >= 0; i1--) {
+  if(i1 % 2 == 0) {
+     noFill();
+    }
+    ellipse(x1, 360, i1*12, i1*12);
 
-
-void draw() {
-  if(x == 640 && x1 == 640){
-    
   }
-  background(#D8D8D8);
-  int size = 500;
-  for(int i = 0; i < 50; i++) {
-  if(i % 2 == 0) {
-      fill(#000000);
-    }
-    else
-    {
-     fill(#D8D8D8); 
-    }
-    ellipse(x++, 360, size, size);
-    size-=10;
+  x++;
+  x1--;
   }
-  size = 500;
-  for(int i = 0; i < 50; i++) {
-  if(i % 2 == 0) {
-      fill(#000000);
-    }
-    else
-    {
-     fill(#D8D8D8); 
-    }
-    ellipse(x1--, 360, size, size);
-    size-=10;
-  }
-}
